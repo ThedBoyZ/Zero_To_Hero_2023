@@ -12,7 +12,7 @@ while True:
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # Perform object detection    
-    objects = cascade.detectMultiScale(gray, scaleFactor=1.0, minNeighbors=5, minSize=(30, 30))
+    objects = cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5, minSize=(30, 30))
     for (x, y, w, h) in objects:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
     
